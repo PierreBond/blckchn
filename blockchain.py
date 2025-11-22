@@ -31,7 +31,7 @@ class Blockchain(object):
         block = {
             'index': len(self.chain) + 1,
             'timestamp': time(),
-            'transaction': self.current_transactions,
+            'transactions': self.current_transactions,
             'proof': proof,
             'previous_hash': previous_hash or self.hash(self.chain[-1]),
 
@@ -189,13 +189,6 @@ node_identifier = str(uuid4()).replace('-', '')
 #instantiate blockchain
 
 blockchain = Blockchain()
-
-# @app.route('/mine', methods=['GET'])
-# def mine():
-#     return "We'll mine a new Block"
-# @app.route('/transactions/new', methods=['POST'])
-# def new_transaction():
-#     return "We'll add a new transaction"
 
 @app.route('/chain', methods =['GET'])
 def full_chain():
