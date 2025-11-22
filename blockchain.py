@@ -190,12 +190,12 @@ node_identifier = str(uuid4()).replace('-', '')
 
 blockchain = Blockchain()
 
-@app.route('/mine', methods=['GET'])
-def mine():
-    return "We'll mine a new Block"
-@app.route('/transactions/new', methods=['POST'])
-def new_transaction():
-    return "We'll add a new transaction"
+# @app.route('/mine', methods=['GET'])
+# def mine():
+#     return "We'll mine a new Block"
+# @app.route('/transactions/new', methods=['POST'])
+# def new_transaction():
+#     return "We'll add a new transaction"
 
 @app.route('/chain', methods =['GET'])
 def full_chain():
